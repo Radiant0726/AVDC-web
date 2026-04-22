@@ -1,0 +1,486 @@
+
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<style type="text/css">
+  @font-face {
+   font-family: 'Avenir Book';
+   src: url("./fonts/Avenir_Book.ttf"); /* File to be stored at your site */
+   }
+
+  body {
+    font-family: "Avenir Book", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:14px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+  }
+  h1 {
+    font-weight:300;
+  }
+  h2 {
+    font-weight:300;
+  }
+
+  p {
+    font-weight:300;
+    line-height: 1.4;
+  }
+
+  code {
+    font-size: 0.8rem;
+    margin: 0 0.2rem;
+    padding: 0.5rem 0.8rem;
+    white-space: nowrap;
+    background: #efefef;
+    border: 1px solid #d3d3d3;
+    color: #000000;
+    border-radius: 3px;
+  }
+
+  pre > code {
+    display: block;
+    white-space: pre;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+  }
+
+  pre.prettyprint > code {
+    border: none;
+  }
+
+
+  .container {
+        display: flex;
+        align-items: center;
+        justify-content: center
+  }
+  .image {
+        flex-basis: 40%
+  }
+  .text {
+        padding-left: 20px;
+        padding-right: 20px;
+  }
+ .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 10px;
+      background-color: #FFFFFF;
+      padding: 10px;
+}
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 0px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+
+  }
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+</style>
+
+  <title>AVDC</title>
+</head>
+
+<body data-new-gr-c-s-check-loaded="14.1093.0" data-gr-ext-installed="">
+  <br>
+      <center>
+      <span style="font-size:36px">Empowering Long-form Omni-modal Understanding with Robust Audio Perception </span> <br><br><br>
+  </center>
+  <table align="center" width="800px">
+            <tbody><tr>
+                    <td align="center" width="175px">
+              <center>
+                <span style="font-size:16px">Kaiying Yan</a><sup>1</sup></span>
+                </center>
+                </td>
+                    <td align="center" width="175px">
+              <center>
+                <span style="font-size:16px">Luoyi Sun</a><sup>2,3</sup></span>
+                </center>
+              </td>
+                    
+                    <td align="center" width="225px">
+              <center>
+                <span style="font-size:16px">Xiao Zhou</a><sup>1
+                </center>
+                </td>
+                    <td align="center" width="225px">
+              <center>
+                <span style="font-size:16px"><a href="https://weidixie.github.io/">Weidi Xie</a><sup>1, 3 <img class="round" style="width:20px" src="resources/corresponding_fig.png"></sup></span>
+                </center>            
+
+          </td></tr>
+        </tbody></table><br>
+  
+  <table align="center" width="700px">
+            <tbody><tr>
+                    <td align="center" width="50px">
+              <center>
+                    <span style="font-size:16px"></span>
+                </center>
+                </td>
+                    <td align="center" width="350px">
+              <center>
+                    <span style="font-size:16px"><sup>1</sup>SAI, Shanghai Jiao Tong University</span>
+                </center>
+                </td>
+                    <td align="center" width="250px">
+              <center>
+                    <span style="font-size:16px"><sup>2</sup>Zhejiang University</span>
+                </center>
+                </td>
+                    <td align="center" width="250px">
+              <center>
+                    <span style="font-size:16px"><sup>3</sup>Shanghai AI Lab</span>
+                </center>
+                </td>
+        </tr></tbody></table>
+
+      <br><hr>
+        <table align="center" width="750px">
+            <tbody><tr>
+              <td align="center" width="180px">
+                <center>
+                  <br>
+                  <span style="font-size:17px">Code
+                    <a href="https://github.com/Radiant0726/AVDC"> [GitHub]</a>
+                  </span>
+                </center>
+              </td>
+
+              <td align="center" width="180px">
+                <center>
+                  <br>
+                  <span style="font-size:17px">
+                    Paper <a href="https://arxiv.org/abs/2309.11500"> [arXiv]</a>
+<!--                     Paper  -->
+                  </span>
+                </center>
+              </td>
+
+              <!-- <td align="center" width="180px">
+                <center>
+                  <br>
+                  <span style="font-size:17px">
+                    Cite <a href="./resources/bibtex.txt"> [BibTeX]</a>
+                  </span>
+                </center>
+              </td> -->
+
+              <td align="center" width="210px">
+                <center>
+                  <br>
+                  <span style="font-size:17px">
+                    Dataset <a href="https://huggingface.co/datasets/KaiyingYan/AVDC"> [HuggingFace]</a>
+                  </span>
+                </center>
+              </td>
+            </tr></tbody>
+      </table>
+
+      <br><hr>
+
+      <center> <h2> Preview </h2> </center>
+      
+      <center> <h3> Multiple-choice QA </h3> </center>
+
+      <div style="display:flex; gap:30px; align-items:flex-start;">
+      
+      <!-- 左列 -->
+      <div style="display:flex; flex-direction:column; align-items:center; width:400px;">
+        
+        <video width="350" controls>
+          <source src="data_sample_release/video/3vemG0XvqXk_258.933_285.367.mp4" type="video/mp4">
+        </video>
+        
+        <div style="max-height:300px; overflow-y:auto; border:1px solid #ccc; padding:10px;">
+          <p style="margin-top:10px; text-align:justify;">
+              <b>Question</b>: What action does the soldier perform while interacting with the equipment in the vehicle?
+              <br><b>Choices</b>: 
+                <span style="display:block; margin-left:2em;">A. Adjusting dials while muted thuds echo in the background.</span>
+                <span style="display:block; margin-left:2em;">B. Toggling switches as artillery explosions rumble outside.</span>
+                <span style="display:block; margin-left:2em;">C. Typing navigational data during a radio command.</span>
+                <span style="display:block; margin-left:2em;">D. Pressing a button synchronized with a mechanical click.</span>
+              <b>Answer</b>: D
+              <br><b>Reasoning</b>:
+                <span style="display:block; margin-left:2em;"><b>Question decomposition</b>: Identify the soldier's interaction with equipment, focusing on (1) visual actions, (2) corresponding audio cues, and (3) situational context.</span>
+                <span style="display:block; margin-left:2em;"><b>Temporal grounding</b>: The interaction occurs between 22.47 and 26.43 seconds, when the screens display a tactical map and 'CONNECTING TO VIDEO LINK' text. The soldier's arm presses a button during this lull in external noise.</span>
+                <span style="display:block; margin-left:2em;"><b>Visual perception</b>: A soldier's gloved arm moves into view to press a button on the control panel, partially obscuring the tactical map. The second screen shows a connection attempt, and the environment lacks visible external movement.</span>
+                <span style="display:block; margin-left:2em;"><b>Audio perception</b>: A distinct mechanical click aligns precisely with the hand's button press. No engine or artillery sounds are present, isolating the click as the key auditory cue.</span>
+                <span style="display:block; margin-left:2em;"><b>Multimodal reasoning and answer synthesis</b>: The synchronized combination of the visual button press (observed via the arm movement and control panel focus) and the isolated click sound (no competing noise) confirms the action.</span>
+          </p>
+        </div>
+      </div>
+      <!-- 右列 -->
+      <div style="width:400px;">
+        <div style="
+            max-height:495px;
+            overflow-y:auto;
+            border:1px solid #ddd;
+            border-radius:8px;
+            padding:12px;
+            background:#fafafa;
+        ">
+          <p style="text-align:justify; margin:0; line-height:1.5;">
+            <b>Audio-Visual Caption</b>: The scene begins with a first-person perspective from inside a military tank, looking out at a battlefield through a heads-up display that overlays critical data such as ammunition types M256 AP and M257 SMK, along with a 'WP-RDY' status above a barren desert landscape. Outside, a stark, sandy expanse stretches under harsh daylight, punctured by roiling plumes of gray-white smoke rising from distant explosions. The tank advances steadily, its treads churning thick clouds of dust into the air, while the mechanical growl of its engine reverberates through the compartment. Sharp metallic clanks synchronize with the treads crushing uneven terrain. A deep, thunderous blast erupts in the mid-distance, visually matched to a sudden burst of dirt and smoke near the horizon. Over the radio, frantic male voices shout warnings—'Incoming! Incoming!'—while sharp cracks of weapon fire pierce the din, their sources obscured by the haze.
+            As the tank maneuvers, the viewpoint sways, and dust kicked up by its movement partially obscures the battlefield. Shadowy outlines of other military vehicles blur in the background, their shapes indistinct amid shifting smoke. Mid-distance artillery detonations synchronize with deep, resonant booms that shudder the tank's armor, each explosion casting stark, fleeting shadows across the ground. The HUD displays ammunition types such as M257 SMK and M256 AP, alongside a 'WP-RDY' status, as clipped radio commands cut through the chaos: 'All stations, halt, halt, halt. Line form.' The rhythmic clank-thud of the treads over compacted earth mirrors the deliberate advance of multiple olive-drab tanks in formation ahead, their outlines intermittently blurred by billowing dust and smoke.
+            Visibility fluctuates as explosions intensify, their gray-white plumes merging with dust kicked up by the column of advancing armor. The tank's barrel dominates the foreground, sunlight glaring off its olive-drab surface and casting sharp shadows to the right. Several allied tanks are visible, their movements obscured by particulate-laden air. Airborne dust reduces the battlefield to a haze of silhouettes and fiery flashes.
+            The scene then shifts to a dimly lit interior dominated by two illuminated screens on a console. The screen first displays a tactical map overlaid with grid lines, and then flashes 'CONNECTING TO VIDEO LINK.' Muted metallic thuds echo as a soldier's arm, clad in matte-green fatigues, adjusts dials on the control panel. A calm male voice states 'MAVEN mobile,' delivered without inflection, the phrase isolated in the absence of engine noise or artillery. Dust particles hover in the screens' backlighting, their stillness contrasting with the earlier chaos. Tactical updates refresh the map with new coordinates, emphasizing a lull in movement as the crew focuses on system checks—the prior cacophony of treads and explosions replaced by the clinical precision of muted switches and methodical communication."
+          </p>
+        </div>
+      </div>
+
+      </div>
+
+      <center> <h3> Open-end QA </h3> </center>
+      <div style="display:flex; gap:30px; align-items:flex-start;">
+      <!-- 左列 -->
+      <div style="display:flex; flex-direction:column; align-items:center; width:400px;">
+        
+        <video width="350" controls>
+          <source src="data_sample_release/video/XbBc-r_mPxk.mp4" type="video/mp4">
+        </video>
+        
+        <div style="max-height:300px; overflow-y:auto; border:1px solid #ccc; padding:10px;">
+          <p style="margin-top:10px; text-align:justify;">
+              <b>Question</b>: How do the individuals in the video express a mix of determination and disappointment during the unboxing, and what specific cues reflect these emotions?
+              <br><b>Answer</b>: The individuals exhibit determination through their persistent unboxing of multiple blind bags despite repeated setbacks, while their disappointment arises from discovering duplicate figurines. The man's frustrated comments like 'another Bob' and 'another Jimmy Junior' directly convey disappointment, while the woman's urgent 'We need to get Linda' signals focused determination. Visually, their hands remain active-tearing open new bags and organizing figurines-even as they voice complaints, indicating their commitment to continue the search. The contrast between their methodical physical actions and the audible sighs or groans highlights the blend of emotions.
+              <br><b>Reasoning</b>:
+                <span style="display:block; margin-left:2em;"><b>Question decomposition</b>: 1. Identify the emotional mix (determination vs. disappointment). 2. Determine which actions and audio cues reflect each emotion.</span>
+                <span style="display:block; margin-left:2em;"><b>Temporal grounding</b>: Key moments include the man's frustrated remarks (e.g., at 24 seconds: 'another Bob') and the woman's goal-oriented dialogue ('We need to get Linda'), alongside continuous unboxing actions throughout the 18-26 second segment.</span>
+                <span style="display:block; margin-left:2em;"><b>Visual perception</b>: Hands repeatedly open new blind bags, arrange figurines, and handle packaging despite setbacks. The camera's steady focus on these motions emphasizes persistence.</span>
+                <span style="display:block; margin-left:2em;"><b>Audio perception</b>: The man's tone shifts to frustration when identifying duplicates ('Oh no, another Bob'), while the woman's urgent, insistent tone ('go again') and laughter during Jean's reveal reinforce her resolve to keep searching.</span>
+                <span style="display:block; margin-left:2em;"><b>Multimodal reasoning and answer synthesis</b>: Visuals show ongoing unboxing activity (determination), while audio includes sighs of frustration and persistent dialogue (e.g., ‘go again'). The simultaneous hands moving and speech demonstrate the co-occurrence of disappointment and persistence, proving the emotional duality in their shared activity.</span>
+          </p>
+        </div>
+      </div>
+      <!-- 右列 -->
+      <div style="width:400px;">
+        <div style="
+            max-height:495px;
+            overflow-y:auto;
+            border:1px solid #ddd;
+            border-radius:8px;
+            padding:12px;
+            background:#fafafa;
+        ">
+          <p style="text-align:justify; margin:0; line-height:1.5;">
+            <b>Audio-Visual Caption</b>: The video opens with a close-up of hands opening a cardboard package from which a metallic blind bag emerges, set against a blue pixelated backdrop where several Bob's Burgers collectible figurines are already arranged on a table. These brightly colored plastic characters, reflecting the show's cartoonish designs, include various figures and accessories. 
+            The sharp crinkling of foil fills the audio as the hands shift to a sealed Kidrobot-branded bag, fingers tugging at its edges with visible effort. Midway through, a figurine in a yellow shirt with blue stripes and brown trousers emerges, held aloft for inspection. A man's voice interrupts the rustling, frustration evident as he remarks, 'Okay, that's another duplicate of Jimmy Junior-go again.' His words coincide with the muffled crumple of the discarded foil bag being set aside. The figurine is placed among the others, its plastic base tapping softly against the table.
+            The camera widens to reveal more of the collectible figurines and stacked Bob's Burgers boxes in the background. A hand lifts a new colorful box into focus, its artwork vivid against the blurred figurines. The sound of crinkling shifts as fingers adjust the box. A woman's excited voice is heard: 'We need to get Linda.' Moments later, the man groans, 'Oh no, another Bob-okay, go again,' his disappointment syncing with the clatter of a figurine-a mustached Bob Belcher-being placed down. Foil wrappers are twisted and flattened as the hands maneuver another metallic blind bag.
+            A playful tension builds as the woman's voice rises: 'Come on Linda, come on Louise, who do you have there?' The bag's foil screeches under strain, punctuated by a jagged tearing noise as the seal splits. Off-screen laughter from the woman overlaps with the man's dry comment, 'Yeah, making all the duplicates,' while cardboard creaks audibly. Suddenly, the metallic blind bag gives way. A figurine clad in a burger costume emerges, its painted details sharp under the light. The woman's voice brightens with recognition: 'Oh, look at that! Jean in the burger suit-that's Jean, right?' The man confirms, 'Yep, Jean in the burger suit.' Her laughter mingles with muffled taps as the figurine is rotated. Behind it, rows of sealed blind bags and boxes form a blurred yet orderly backdrop.
+            Throughout, the environment feels insulated-no ambient noise dilutes the crisp crinkling of foil, the shuffle of cardboard, or the casual interplay of voices. The static camera frames each action deliberately: hands gripping, tearing, adjusting, while the figurines and packaging dominate both the visual and auditory narrative. The unboxing alternates between anticipation and mild frustration, with tactile sounds and spontaneous dialogue underscoring a shared, methodical hunt for prized collectibles against a backdrop of vibrant, curated fandom.
+          </p>
+        </div>
+      </div>
+      </div>
+
+      </div>
+
+      <br>
+      <hr>
+      <br>
+  
+
+      <center><h2> Abstract </h2> </center>
+      <p style="text-align:justify; text-justify:inter-ideograph;">
+      </p><div class="container">
+        <div class="text" width="400px"> 
+          <p style="text-align:justify; text-justify:inter-ideograph;">
+            <left>
+              Recent advances in large-scale multimodal models have driven remarkable progress in vision-language tasks; 
+              however, comprehensive omni-modal understanding remains under-explored, largely due to the scarcity of datasets with rich, explicitly aligned auditory cues. 
+              To bridge this gap, we present <b>AVDC</b> (<b>A</b>udio-<b>V</b>isual <b>D</b>ecoupled <b>C</b>aptions), a large-scale dataset designed to disentangle visual and auditory semantics. 
+              Specifically, we propose an automated pipeline that leverages off-the-shelf models to annotate videos with tripartite captions: 
+              visual-only (V), audio-only (A), and joint audio-visual (AV). 
+              This decoupled structure explicitly captures both modality-specific nuances and complex cross-modal interactions. 
+              Building upon this, we introduce <b>AVDC-QA-CoT</b>, a Chain-of-Thought augmented question-answering dataset to foster audio-visual reasoning. 
+              To fully exploit these resources, we employ a two-stage training paradigm: omni-modal caption generation pre-training on <b>AVDC</b>, followed by instruction tuning on <b>AVDC-QA-CoT</b>. 
+              Extensive experiments across diverse downstream tasks, spanning video captioning, audio-centric analysis, and omni-modal benchmarks, demonstrate consistent and significant performance gains, showing the efficacy of our proposed datasets and training strategy in advancing omni-modal perception.
+            </left></p>
+          </div>
+        </div>
+      <br>
+      <hr>
+      <br>
+
+      <center> <h2> Dataset Pipeline </h2> </center>
+      <p style="margin-bottom:5px;">
+        <img src="resources/pipe.jpg" width="800px">
+      </p>
+
+      <div class="container" style="margin-top:0;">
+        <div class="text" style="width:800px;">
+          <p style="margin-top:0; text-align:justify;">
+            <b>Automatic pipeline for the audio-visual decoupled caption generation.</b>
+            <b>(I).</b> Multiple audio and language models collaborate to extract raw auditory information, including general audio captions, music and speech descriptions, and verification results. 
+            <b>(II).</b> The extracted audio information is temporally aligned and integrated with visual content to produce segment-level audio and audio-visual captions in sequential order, ensuring temporal continuity. 
+            <b>(III).</b> The long-form caption generation stage summarizes all segment-level captions into a coherent global video caption, while multimodal verification and correction refine accuracy and consistency. Vision- and audio-related content is highlighted in <span style="color:orange">orange</span> and <span style="color:rgb(50, 141, 226)">blue</span>, respectively. Abbreviations: Cap.~(Caption), Info.~(Information).
+         </p>
+        </div>
+      </div>
+      <br>
+      <hr>
+      <br>
+  
+      <center> <h2> Architecture </h2> </center>
+      <p style="margin-bottom:5px;">
+        <img src="resources/arch.jpg" width="800px">
+      </p>
+
+      <div class="container" style="margin-top:0;">
+        <div class="text" style="width:800px;">
+          <p style="margin-top:0; text-align:justify;">
+            <b>Model architecture.</b>
+            The framework preserves fine-grained audio-visual correspondence via feature preprocessing and employs a two-stage training strategy: 
+            <b>Stage I.</b> Omni-modal caption generation training to optimal multimodal representations, and 
+            <b>Stage II.</b> Instruction Tuning for QA, supporting both direct answers and chain-of-thought reasoning. 
+            Abbreviations: Cap. (Caption), Ans.(Answer).
+          </p>
+        </div>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+
+      <center> <h2> Experiments </h2> </center>
+
+      <center> <h3> Captioning benchmarks </h3> </center>
+      <div class="container" style="margin-top:0;">
+        <div class="text" style="width:800px;">
+          <p style="margin-top:0; text-align:justify;">
+            <b>The results yields three key findings:</b>
+            <b>(i).</b> Proprietary models remain strong. Omni-modal proprietary systems perform consistently well, producing fluent and semantically rich captions with low missing rates.
+            <b>(ii).</b> Open-source baselines lag, especially on invisible audio. They struggle to detect non-visual sound events with nearly 90% missing on AVDC-test and exhibit a clear coverage-precision trade-off: reducing misses often increases hallucinations, while limiting hallucinations reduces content coverage.
+            <b>(iii).</b> Our model improves coverage and balance. It achieves the lowest missing rates for both visible and invisible sounds on AVDC-test, reducing overall misses by over 10% vs. Qwen2.5-Omni. It also shows stronger audio perception on UGC-VideoCap and achieves the best miss-hallucination trade-off on Video-SALMONN-2.
+          </p>
+        </div>
+      </div>
+      <p style="margin-bottom:5px; text-align:center;">
+        <img src="resources/caption.png" width="750px">
+      </p>
+
+      <center> <h3> Video QA benchmarks </h3> </center>
+      <div class="container" style="margin-top:0;">
+        <div class="text" style="width:800px;">
+          <p style="margin-top:0; text-align:justify;">
+            <b>The results on video QA benchmarks shows:</b>
+            <b>(i).</b> Proprietary models lead overall. Commercial omni-modal systems achieve the highest accuracy, benefiting from large-scale pretraining and optimized multimodal integration.
+            <b>(ii).</b> Our training brings consistent gains. Built on Qwen2.5-Omni, our model improves accuracy by over 3% across all omni benchmarks, while preserving performance on vision-centric tasks (Video-MME, MVBench).
+            <b>(iii).</b> Thinking mode further boosts performance. It matches or surpasses prior open-source models and reaches parity with Gemini-2.5-Flash on WorldSense, narrowing the gap to proprietary systems.
+          </p>
+        </div>
+      </div>
+      <p style="margin-bottom:5px; text-align:center;">
+        <img src="resources/videoQA.png" width="650px">
+      </p>
+
+      <center> <h3> Audio QA benchmarks </h3> </center>
+      <div class="container" style="margin-top:0;">
+        <div class="text" style="width:800px;">
+          <p style="margin-top:0; text-align:justify;">
+            <b>The results on audio QA benchmarks shows:</b>
+            <b>(i).</b> Improvements over the backbone. Our model consistently outperforms Qwen2.5-Omni on MMAU and MMAR, demonstrating that data modeling invisible sounds and audio-visual misalignment enhance auditory representations and robustness.
+            <b>(ii).</b> Competitive with audio-language systems. It matches or surpasses strong baselines, outperforming most open-source models. This indicates that multimodal training also improves pure audio comprehension, even without visual input.
+          </p>
+        </div>
+      </div>
+      <p style="margin-bottom:5px; text-align:center;">
+        <img src="resources/audioQA.png" width="550px">
+      </p>
+
+      <br>
+      <hr>
+      <br>
+<br>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
