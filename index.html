@@ -267,7 +267,7 @@
 
       <br><hr>
 
-      <center> <h2> Preview </h2> </center>
+      <center> <h2> Preview examples in AVDC </h2> </center>
       
       <center> <h3> Multiple-choice QA </h3> </center>
 
@@ -318,6 +318,8 @@
       </div>
 
       </div>
+
+      <br>
 
       <center> <h3> Open-end QA </h3> </center>
       <div style="display:flex; gap:30px; align-items:flex-start;">
@@ -392,17 +394,17 @@
       <br>
 
       <center> <h2> Dataset Pipeline </h2> </center>
-      <p style="margin-bottom:5px;">
-        <img src="resources/pipe.jpg" width="800px">
+      <p style="margin-bottom:5px; text-align:center;">
+        <img src="resources/pipe.jpg" width="780px">
       </p>
 
       <div class="container" style="margin-top:0;">
         <div class="text" style="width:800px;">
           <p style="margin-top:0; text-align:justify;">
             <b>Automatic pipeline for the audio-visual decoupled caption generation.</b>
-            <b>(I).</b> Multiple audio and language models collaborate to extract raw auditory information, including general audio captions, music and speech descriptions, and verification results. 
-            <b>(II).</b> The extracted audio information is temporally aligned and integrated with visual content to produce segment-level audio and audio-visual captions in sequential order, ensuring temporal continuity. 
-            <b>(III).</b> The long-form caption generation stage summarizes all segment-level captions into a coherent global video caption, while multimodal verification and correction refine accuracy and consistency. Vision- and audio-related content is highlighted in <span style="color:orange">orange</span> and <span style="color:rgb(50, 141, 226)">blue</span>, respectively. Abbreviations: Cap.~(Caption), Info.~(Information).
+            <b>(i).</b> Multiple audio and language models collaborate to extract raw auditory information, including general audio captions, music and speech descriptions, and verification results. 
+            <b>(ii).</b> The extracted audio information is temporally aligned and integrated with visual content to produce segment-level audio and audio-visual captions in sequential order, ensuring temporal continuity. 
+            <b>(iii).</b> The long-form caption generation stage summarizes all segment-level captions into a coherent global video caption, while multimodal verification and correction refine accuracy and consistency. Vision- and audio-related content is highlighted in <span style="color:orange">orange</span> and <span style="color:rgb(50, 141, 226)">blue</span>, respectively. Abbreviations: Cap.~(Caption), Info.~(Information).
          </p>
         </div>
       </div>
@@ -411,8 +413,8 @@
       <br>
   
       <center> <h2> Architecture </h2> </center>
-      <p style="margin-bottom:5px;">
-        <img src="resources/arch.jpg" width="800px">
+      <p style="margin-bottom:5px; text-align:center;">
+        <img src="resources/arch.jpg" width="780px">
       </p>
 
       <div class="container" style="margin-top:0;">
@@ -437,25 +439,28 @@
       <div class="container" style="margin-top:0;">
         <div class="text" style="width:800px;">
           <p style="margin-top:0; text-align:justify;">
-            <b>The results yields three key findings:</b>
-            <b>(i).</b> Proprietary models remain strong. Omni-modal proprietary systems perform consistently well, producing fluent and semantically rich captions with low missing rates.
-            <b>(ii).</b> Open-source baselines lag, especially on invisible audio. They struggle to detect non-visual sound events with nearly 90% missing on AVDC-test and exhibit a clear coverage-precision trade-off: reducing misses often increases hallucinations, while limiting hallucinations reduces content coverage.
-            <b>(iii).</b> Our model improves coverage and balance. It achieves the lowest missing rates for both visible and invisible sounds on AVDC-test, reducing overall misses by over 10% vs. Qwen2.5-Omni. It also shows stronger audio perception on UGC-VideoCap and achieves the best miss-hallucination trade-off on Video-SALMONN-2.
+            The results yield the following key findings. 
+            Proprietary models remain strong, with omni-modal proprietary systems performing consistently well by producing fluent and semantically rich captions with low missing rates. 
+            In contrast, open-source baselines lag behind, especially on invisible audio, as they struggle to detect non-visual sound events with nearly 90% missing on AVDC-test and exhibit a clear coverage-precision trade-off, where reducing misses often increases hallucinations while limiting hallucinations reduces content coverage. 
+            Our model improves both coverage and balance, achieving the lowest missing rates for both visible and invisible sounds on AVDC-test, reducing overall misses by over 10% compared to Qwen2.5-Omni, and demonstrating stronger audio perception on UGC-VideoCap along with the best miss-hallucination trade-off on Video-SALMONN-2. 
           </p>
         </div>
       </div>
       <p style="margin-bottom:5px; text-align:center;">
         <img src="resources/caption.png" width="750px">
       </p>
+      
+      <br>
+      <br>
 
       <center> <h3> Video QA benchmarks </h3> </center>
       <div class="container" style="margin-top:0;">
         <div class="text" style="width:800px;">
           <p style="margin-top:0; text-align:justify;">
-            <b>The results on video QA benchmarks shows:</b>
-            <b>(i).</b> Proprietary models lead overall. Commercial omni-modal systems achieve the highest accuracy, benefiting from large-scale pretraining and optimized multimodal integration.
-            <b>(ii).</b> Our training brings consistent gains. Built on Qwen2.5-Omni, our model improves accuracy by over 3% across all omni benchmarks, while preserving performance on vision-centric tasks (Video-MME, MVBench).
-            <b>(iii).</b> Thinking mode further boosts performance. It matches or surpasses prior open-source models and reaches parity with Gemini-2.5-Flash on WorldSense, narrowing the gap to proprietary systems.
+            The results on video QA benchmarks show that 
+            proprietary models lead overall, with commercial omni-modal systems achieving the highest accuracy due to large-scale pretraining and optimized multimodal integration. 
+            Our training brings consistent gains, as our model built on Qwen2.5-Omni improves accuracy by over 3% across all omni benchmarks while preserving strong performance on vision-centric tasks such as Video-MME and MVBench. 
+            Furthermore, enabling the thinking mode further boosts performance, allowing our model to match or surpass prior open-source models and reach parity with Gemini-2.5-Flash on WorldSense, thereby narrowing the gap to proprietary systems.
           </p>
         </div>
       </div>
@@ -463,13 +468,16 @@
         <img src="resources/videoQA.png" width="650px">
       </p>
 
+      <br>
+      <br>
+
       <center> <h3> Audio QA benchmarks </h3> </center>
       <div class="container" style="margin-top:0;">
         <div class="text" style="width:800px;">
           <p style="margin-top:0; text-align:justify;">
-            <b>The results on audio QA benchmarks shows:</b>
-            <b>(i).</b> Improvements over the backbone. Our model consistently outperforms Qwen2.5-Omni on MMAU and MMAR, demonstrating that data modeling invisible sounds and audio-visual misalignment enhance auditory representations and robustness.
-            <b>(ii).</b> Competitive with audio-language systems. It matches or surpasses strong baselines, outperforming most open-source models. This indicates that multimodal training also improves pure audio comprehension, even without visual input.
+            The results on audio QA benchmarks show that 
+            our model consistently improves over its backbone, outperforming Qwen2.5-Omni on MMAU and MMAR, which suggests that modeling invisible sounds and audio-visual misalignment enhances auditory representations and robustness. 
+            It also remains competitive with dedicated audio-language systems, matching or surpassing strong baselines and outperforming most open-source models, indicating that multimodal training can also improve pure audio comprehension even without visual input.
           </p>
         </div>
       </div>
